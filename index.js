@@ -8,12 +8,11 @@ console.log(chat)
 
 if(input && button && chat){
   button.addEventListener('click', adicionaMensagem);
-  document.addEventListener('keydown',function(e){
-      if(e.keyCode == 13 && document.activeElement.tagName == 'INPUT'){
-          adicionaMensagem();
-      }
-  });
-}
+  input.addEventListener('keydown', function(e) { 
+   if(e.keyCode === 13) { 
+     adicionaMensagem(); 
+   } 
+});
 
 function adicionaMensagem(){
   if(input.value != ''){
